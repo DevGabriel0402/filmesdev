@@ -1,0 +1,341 @@
+:root {
+  --bg-color: rgb(19, 17, 17);
+  --bg-color-mobile: rgba(19, 17, 17, 0.5);
+  --font-color: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 9999;
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  color: var(--font-color);
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+  background: transparent;
+}
+
+li:hover {
+  background: transparent;
+  transform: scale(1.1);
+  font-weight: 600;
+  color: red;
+}
+
+.logo {
+  width: 128px;
+}
+
+/* search bar */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f5f5f5;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s linear, width 0s;
+  color: var(--font-color);
+}
+
+.search-bar input:focus {
+  outline-style: none;
+}
+
+.search-bar img {
+  width: 30px;
+  background-color: transparent;
+  filter: brightness(1) invert(1);
+}
+
+.search-bar button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.search-bar button:hover {
+  transform: rotate(360deg);
+}
+
+.search-bar button svg {
+  width: 20px;
+  height: 20px;
+  fill: #555555;
+}
+
+.container {
+  padding-top: 40px;
+
+  margin: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: start;
+}
+
+.box {
+  width: auto;
+  height: 300px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  margin: 2px;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.thumb {
+  width: 180px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.thumb:hover {
+  transform: scale(1.1);
+}
+
+.box-info {
+  display: flex;
+  width: 100%;
+  margin-top: 25px;
+  justify-content: space-around;
+}
+
+.blur {
+  filter: blur(1.5px); /* Aplica o efeito de borramento */
+}
+
+.menu-hamburguer {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding-right: 60px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-hamburguer span {
+  display: block;
+  border-radius: 10px;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: var(--font-color);
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+.menu-hamburguer span:nth-child(1) {
+  width: 35px;
+}
+.menu-hamburguer span:nth-child(3) {
+  width: 35px;
+}
+
+.menu-hamburguer.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background-color: rgb(245, 240, 240);
+  width: 30px;
+}
+
+.menu-hamburguer.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguer.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background-color: rgb(245, 240, 240);
+
+  width: 30px;
+}
+
+/* CSS Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup iframe {
+  width: 70%;
+  height: 80%;
+  border: none;
+  border-radius: 25px;
+}
+.popup .close-button {
+  position: Absolute;
+  top: 5%;
+  right: 10%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 40vh;
+  color: var(--bg-color);
+  font-size: 16px;
+  background-color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 849px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 25px;
+    margin-bottom: 15px;
+  }
+  header.transparente {
+    background-color: var(--bg-color-mobile);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+    top: 0;
+    height: auto;
+  }
+
+  header.transparente img.logo {
+    filter: brightness(1) invert(0);
+    background: transparent;
+  }
+
+  .search-bar {
+    margin-bottom: 15px;
+  }
+
+  .search-bar input {
+    width: 150px;
+  }
+
+  .search-bar input:focus {
+    width: auto;
+  }
+  .search-bar input::placeholder {
+    color: var(--font-color);
+  }
+
+  ul#genero {
+    display: none;
+  }
+
+  ul#genero.menu-ativo {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: static;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 400px);
+    background-color: var(--bg-color-mobile);
+    z-index: 10;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+
+  ul#genero.menu-ativo li {
+    padding: 15px;
+    font-size: 22px;
+    border: none;
+  }
+  .container {
+    margin-top: 5px;
+    margin: 0;
+    justify-content: center;
+  }
+  .popup iframe {
+    width: 70%;
+    height: 40%;
+  }
+}

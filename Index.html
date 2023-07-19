@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="Assets/Logo quadrada-1.png"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="Assets/Logo quadrada-1.png" />
+    <meta name="apple-mobile-web-app-title" content="Filmerang" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+    <title>Filmerang</title>
+  </head>
+  <body>
+    <div id="loading">Carregando...</div>
+    <header>
+      <img class="logo" src="assets/logo-branca.svg" alt="logo" />
+      <button class="menu-hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="genero">
+        <li data-genero="todos">Todos</li>
+        <li data-genero="comedia">Comédia</li>
+        <li data-genero="acao">Ação</li>
+        <li data-genero="romance">Romance</li>
+        <li data-genero="infantil">Infantil</li>
+        <li data-genero="drama">Drama</li>
+        <div class="search-bar">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Pesquisar filme"
+            required
+          />
+          <button id="search-button">
+            <img src="assets/(Traced).png" alt="" />
+          </button>
+        </div>
+      </ul>
+    </header>
+    <main class="container">
+      <!-- A grande Aposta -->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img3.acsta.net/c_310_420/pictures/15/11/13/14/46/341047.jpg"
+          alt="A grande aposta"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=1TwQR8ZDJUUUAQ0lFyU-Qw&resolution=1080&accelerometer=true&autoplay=true&picture-in-picture=true&mute=false&uk=4399601951365&fid=829422235285554', 'https://3.bp.blogspot.com/-dt27s_Chs4U/VqTCgA7s4wI/AAAAAAAAZos/XwYXnFj_oUQ/w1200-h630-p-k-no-nu/A-grande-aposta.jpg')"
+        />
+      </div>
+      <!-- Milagre no Paraíso -->
+      <div class="box" data-genero="drama">
+        <img
+          class="thumb"
+          src="https://assetsgn.nowonline.com.br/assets/p12119287_v_v8_an.jpg"
+          alt="O milagre do paraiso"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=tls86kRt84Txd46YGmV-Uw&resolution=1080&autoplay=true&mute=false&uk=4399601951365&fid=909076001790283', 'https://portalwp.s3.amazonaws.com/wp-content/uploads/2020/08/19044906/20-filme-abre-jejum-de-daniel.jpg')"
+        />
+      </div>
+      <!-- Um Amável Pão duro -->
+      <div class="box" data-genero="comedia">
+        <img
+          class="thumb"
+          src="https://media.fstatic.com/w9rYJe6vuByis20VGqKUJWTI03o=/322x478/smart/filters:format(webp)/media/movies/covers/2017/08/26916_1_20170605125203.jpg"
+          alt="Um Amável Pão Duro"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=CtrQeICCFQNZOBAGMtk9Ew&resolution=1080&autoplay=true&picture-in-picture&accelerometer&mute=false&uk=4399601951365&fid=978661376472758', 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/3b6a2313abe29f353dce59ac4d7569cba29a5716e367d0a0a28d581c7054b628._UY500_UX667_RI_TTW_.jpg')"
+        />
+      </div>
+      <!-- A quinta Onda -->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img3.acsta.net/pictures/15/12/11/19/15/262364.jpg"
+          alt="A quinta Onda"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=9xvjIHFMEvjuzFd3W3DL4w&resolution=1080&autoplay=true&picture-in-picture&mute=false&uk=4399601951365&fid=697124019319302', 'https://curitibacult.com.br/wp-content/uploads/2016/01/The5thwave.jpg')"
+        />
+      </div>
+      <!-- Pregadno o amor-->
+      <div class="box" data-genero="romance">
+        <img
+          class="thumb"
+          src="https://media.fstatic.com/VUDPdIW4bt38AX9l9EofIoWtSsM=/322x478/smart/filters:format(webp)/media/movies/covers/2019/03/2943003_sa.jpg"
+          alt="Pregando o amor"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=OM0LXl0BAF2dg0HFP8uRIQ&resolution=1080&autoplay=true&picture-in-picture&mute=false&uk=4399601951365&fid=110667365730494', 'https://i.ytimg.com/vi/5NwCRJulzUI/maxresdefault.jpg')"
+        />
+      </div>
+      <!-- Transformers 2007-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://i.pinimg.com/originals/e7/ee/82/e7ee82fd2e5d91ea2f6120a5e08da077.jpg"
+          alt="Transformers"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=djIXEIo7iEUnCbMKsyKpJA&resolution=1080&autoplay=true&mute=false&uk=4399601951365&fid=764070446197397', 'https://s.glbimg.com/og/rg/f/original/2010/09/27/03.jpg')"
+        />
+      </div>
+      <!-- Boyka o Imbativel-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4cc7b56e02696e6aa7ffc6ea13dfbe58eae34a1c850f3ff0c9f6bb1a3b53475f._RI_TTW_.jpg"
+          alt="Boyka - O Imbativel"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=m0ZgSH7mI75OmDVb1q6X3Q&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=358642214015389', 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/73d59f9d7313ffe4f94c55602f4cc3008ee639d285b038bcdd3325a8897da619._UY500_UX667_RI_TTW_.jpg')"
+        />
+      </div>
+      <!-- O Imbativel 3-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://play-lh.googleusercontent.com/ujR8IIG9f84EAyz88hSszayKh8mStLJXE32C8llhdSOjOSB7Vf0_NkaeAse2Kr3qSOAu"
+          alt="O Imbativel 3"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=Sv9DaUe8XJshPQyqMcJPCQ&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=1005598829793982', 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/c11265077e864bfc30751f24073234a90f2387f2d05ef38a3b9de634bcfe04cf._UY500_UX667_RI_TTW_.jpg')"
+        />
+      </div>
+      <!-- Tropa de Elite 2-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img3.acsta.net/medias/nmedia/18/87/90/29/19962728.jpg"
+          alt="Tropa de Elite 2"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=qCxQ_UW1yU-zXGBgMrgbFA&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=55724200227601', 'https://i.ytimg.com/vi/jW_f3XHk3kE/maxresdefault.jpg')"
+        />
+      </div>
+      <!-- Quebrando Regras 2-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img2.acsta.net/pictures/13/12/26/17/48/053975.jpg"
+          alt="Quebrando Regras 2"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=lQcJcuNXUXXf7qTz5GYnKQ&resolution=360&autoplay=true&mute=false&uk=4399601951365&fid=971488147355979', 'https://1.bp.blogspot.com/-k8qRBYCD6q8/Te49Ac7VEDI/AAAAAAAAAX0/20I8jWOwNME/s1600/QUEBRANDO+REGRAS+2+THE+BEATDOWN+2011+FILME.jpg')"
+        />
+      </div>
+      <!-- Cão de Briga-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img2.acsta.net/pictures/210/392/21039213_20130912185753349.jpg"
+          alt="Cão de Briga"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=DHLtoA4jmwmfY5DBdeNogg&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=408560873738682', 'https://yandex-images.clstorage.net/Ko5r5o104/8540b8dBaD/e2V5dBLQj_poh6f7Tipi6e4RstlnWl_NqRH1L0IuevY0AYiocXDQGtIQeSdbIMgOYGPbmJI3bacajgo4gWMNgz40bDhYkJalNMC9r0YpZ-vzTPHIewBbkLNTqSFUJCOoZFbgxAYE8SH-IwhQJQ_XX2s224aMMTqrfOEaYtcpcrtKUUdeOs7G5G2M0cVgPl7Y-3W78HoZW7mJIYw8aF087zwE-MgwNcsq2BULQAQb93pHN8e97hM3tHvLeGHTNHGuelF3dCzU9d5tjcjKVj1gwPJKtPhEEViVri2QPUV-J-MEIMvCJAfXKtYfBHYlE-FYcBr3uNAVHqJU10pI7R9vs05hf1sVyuTxf7DL81gAcfnAWLjMWD51mpYypj5HexfbGw7S8B8v8jLGORZSIC_8TFYDyo7QJD2Fde9sVfcJcZhlZ3xhLdPJzXaB28VZKnfV-3mw1HYNWKu4Ipw7R0Yc3CEz5vAoNOEOxhgOdDU27HZtNteKxiQMtGvSWVjxEHyDR2JXexfr7thtud3EWA924-FLmf1iBWWLpB-tG0VbO8M3JNrtFw7xLfQrAlodLMNyQRjIjtcbP7xo2G5n8DdAs2BIWH8twNLaS6DF83srXNvuSoXySzBUs6UnugFhWRXhIQbL1RAVwg3gCwR4BDPNT1w33bbyPxqQQPNyT88xUbB3cWxGE8vjw3Wax-NKDVDE_XqFxUcAYrq0NpkdU2wm-TI_yeoVNvgd0D0ORzggwl13NfyOzTMjs2TxXmbSNU6ya2V1Whnh6_h0uczMTjdO_eRzi9JXH1ijqzmaFH1QJuUkJM32BRTVG9YTC1o4LMlRdDj2us4HHK1T2WBY-Q5xj2JnQ20h9tX7RJb54F4sTNznRozYSjlFsZYYvgFqTz__PjXy6wMR0jvGCDdPBzf4VGc-55T3KAOlVe9wV_8MYYN4T09gBejvwlW_yPhWEXDJ70Wd72EkRIemBbA5SlA')"
+        />
+      </div>
+      <!-- UP altas Aventuras -->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://4.bp.blogspot.com/-PKMMnUeahcg/XKyckKWV93I/AAAAAAAAlHw/vKhO1ue99p4IZBVkyezlz-mKAHpbdJSLQCLcBGAs/s1600/up%2Baltas%2Baventuras%2Bposter.jpg"
+          alt="UP Altas Aventuras"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=XXj4NdteKg4mSHChf_OiVw&resolution=1080&autoplay=true&mute=false&uk=4399601951365&fid=151030655520883', 'https://i.pinimg.com/originals/e8/f6/6c/e8f66cbae16bc4dc77acc3b4209e6b8a.jpg')"
+        />
+      </div>
+      <!-- Quebrando Regras-->
+      <div class="box" data-genero="acao">
+        <img
+          class="thumb"
+          src="https://br.web.img3.acsta.net/pictures/16/06/13/17/43/340414.jpg"
+          alt="Quebrando Regras"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=28gIk8oNDg0imswFCloNJg&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=436685033487994', 'https://avatars.mds.yandex.net/i?id=43d7c7dfca85151298b8b10b80022dbab50fc0b5-9225226-images-thumbs&n=13')"
+        />
+      </div>
+      <!-- A dama e o vagabundo-->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://upload.wikimedia.org/wikipedia/pt/thumb/f/fd/Lady_and_the_Tramp_%282019%29.jpg/250px-Lady_and_the_Tramp_%282019%29.jpg"
+          alt="A Dama e O vagabundo--"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=yocgadtNXjxjn_NQSBUVqA&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=422987137113540', 'https://br.web.img3.acsta.net/newsv7/19/08/23/16/06/1817330.jpg')"
+        />
+      </div>
+
+      <!-- Mario Bros - O filme-->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/208807923/poster-super-mario-bros-o-filme-i-f04111d3.jpg"
+          alt="Mario Bros - O Filme"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=7fwI8WG-zKwNXTJiJTWWlQ&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=883663615126568', 'http://assets2.ignimgs.com/2015/09/10/mario30years1280jpg-9b2733.jpg')"
+        />
+      </div>
+      <!-- A bailarina -->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://anabotafogomaison.com.br/wp-content/uploads/2017/01/poster-A-Bailarina1.jpg"
+          alt="A Bailarina"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=zdM1BXfdriK3aeip1IGLag&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=264152611421082', 'https://ichef.bbci.co.uk/images/ic/1200x675/p04lngq9.jpg')"
+        />
+      </div>
+
+      <!-- Madagascar -->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/54/02/20150796.jpg"
+          alt="Madagascar"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=yWaBmjn-ESvqUl9NeHLLeQ&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=594040003629956', 'https://pbs.twimg.com/media/Dt6x5nFXcAASx_a?format=jpg&name=large')"
+        />
+      </div>
+      <!-- Pets - A Vida Secreta dos Bichos -->
+      <div class="box" data-genero="infantil">
+        <img
+          class="thumb"
+          src="https://s2-globo-play.glbimg.com/LPltEZYS2U-SKI5YtE0J1owHvgU=/362x536/https://s2.glbimg.com/NPIHLeSWnxhPh6daA7f_GRFFARI=/i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2021/6/c/AQCvaOSpmhAfy9A4aFxA/2021-1944-pets-poster.jpg"
+          alt="Pets - A vida Secreta dos Bichos"
+          onclick="criarIframe('https://terabox.com/sharing/embed?surl=XHBnF-h_omNH66NyAhQd5w&resolution=720&autoplay=true&mute=false&uk=4399601951365&fid=1047443462755638', 'https://free4kwallpapers.com/uploads/originals/2016/02/11/the-secret-life-of-pets-2016-wallpaper.jpg')"
+        />
+      </div>
+    </main>
+    <footer>&#174;FILMERANG 2023</footer>
+  </body>
+</html>
